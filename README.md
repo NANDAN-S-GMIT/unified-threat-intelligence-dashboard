@@ -4,6 +4,82 @@
 
 A SOC-focused **Threat Intelligence Dashboard** designed to streamline the enrichment and investigation of **Indicators of Compromise (IOCs)** by aggregating multiple OSINT intelligence platforms into a single unified interface.
 
+# Screenshots
+
+The following screenshots highlight the key components and workflow of the **Unified Threat Intelligence Dashboard (UTID)**.
+
+---
+
+### Dashboard & Project Information
+
+<table>
+<tr>
+<td align="center">
+<b>Main Dashboard</b><br>
+<img src="https://raw.githubusercontent.com/NANDAN-S-GMIT/images/main/01_UTID_Dashboard.png" width="500"/>
+</td>
+
+<td align="center">
+<b>Project Details Page</b><br>
+<img src="https://raw.githubusercontent.com/NANDAN-S-GMIT/images/main/02_UTID_Projectdetails.png" width="500"/>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<b>Why SOC Analysts Need This Tool</b><br>
+<img src="https://raw.githubusercontent.com/NANDAN-S-GMIT/images/main/03_UTID_why_We_Need_This_Tool.png" width="500"/>
+</td>
+
+<td align="center">
+<b>About the Creator</b><br>
+<img src="https://raw.githubusercontent.com/NANDAN-S-GMIT/images/main/04_UTID_About_Creater.png" width="500"/>
+</td>
+</tr>
+</table>
+
+---
+
+### SOC Investigation Workflow
+
+<table>
+<tr>
+<td align="center">
+<b>How UTID Improves SOC Triage Speed</b><br>
+<img src="https://raw.githubusercontent.com/NANDAN-S-GMIT/images/main/04_UTID_How_This_Improves_SOC_Triage_Speed.png" width="500"/>
+</td>
+
+<td align="center">
+<b>IOC Search Entry</b><br>
+<img src="https://raw.githubusercontent.com/NANDAN-S-GMIT/images/main/05_UTID_IOC_Search_Entry.png" width="500"/>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<b>OSINT Tool Selection</b><br>
+<img src="https://raw.githubusercontent.com/NANDAN-S-GMIT/images/main/06_UTID_IOC_Tool_Selection.png" width="500"/>
+</td>
+
+<td align="center">
+<b>Unified Intelligence Results</b><br>
+<img src="https://raw.githubusercontent.com/NANDAN-S-GMIT/images/main/07_UTID_Unified_Intelligence_Results_Cards.png" width="500"/>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<b>Application Footer</b><br>
+<img src="https://raw.githubusercontent.com/NANDAN-S-GMIT/images/main/08_UTID_Application_Footer_Section.png" width="500"/>
+</td>
+</tr>
+</table>
+
+---
+
+These screenshots demonstrate the full **SOC investigation workflow**, starting from IOC entry to unified intelligence analysis across multiple OSINT platforms.
+
+
 🔗 **Live Demo:**
 https://unified-threat-intelligence.netlify.app/
 
