@@ -278,55 +278,41 @@ Despite these limitations, the dashboard effectively demonstrates how **threat i
 
 ---
 
-# Screenshots
-
-### Threat Intelligence Dashboard
-
-Main IOC investigation interface displaying multiple intelligence sources.
-
-### Project Documentation Page
-
-Detailed explanation of SOC workflows and project architecture.
-
-### About Creator Page
-
-Professional overview of the developer and cybersecurity interests.
-
----
-
-# About the Creator
+## About the Creator
 
 **Nandan S**
 
 Cyber Security Analyst Trainee
 Aspiring SOC Analyst | Full Stack Developer
 
-I built this project to demonstrate my understanding of **SOC analyst workflows, threat intelligence enrichment, and modern web application development**.
+I developed the **Unified Threat Intelligence Dashboard (UTID)** to demonstrate my practical understanding of **SOC analyst workflows, threat intelligence enrichment, and modern web application development**.
 
-My goal is to combine **cybersecurity knowledge with technical development skills** to create practical tools that support real-world security operations.
+This project reflects my interest in building tools that help security teams **investigate Indicators of Compromise (IOCs) faster and more efficiently** by integrating multiple OSINT intelligence sources into a single investigative interface.
+
+My goal is to combine **cybersecurity expertise with development skills** to build practical solutions that support modern **Security Operations Centers (SOC)**.
 
 ---
 
-# Contact
+## Contact
 
 **Nandan S**
 
-📧 Email
-[nandans.dev@gmail.com](mailto:nandans.dev@gmail.com)
+📧 **Email**
+[nandan.siddappa@gmail.com](mailto:nandan.siddappa@gmail.com)
 
-🔗 LinkedIn
+🔗 **LinkedIn**
 https://www.linkedin.com/in/nandan-s
 
-💻 GitHub
+💻 **GitHub**
 https://github.com/NANDAN-S-GMIT
 
-🌐 Live Project
+🌐 **Live Project**
 https://unified-threat-intelligence.netlify.app/
 
 ---
 
-# License
+## License
 
 This project is licensed under the **MIT License**.
 
-Copyright © 2026 Nandan S
+Copyright © 2026 **Nandan S**
