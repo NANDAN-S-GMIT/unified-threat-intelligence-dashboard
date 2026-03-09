@@ -67,14 +67,6 @@ The following screenshots highlight the key components and workflow of the **Uni
 </td>
 </tr>
 
-<tr>
-<td align="center">
-<b>Application Footer</b><br>
-<img src="https://raw.githubusercontent.com/NANDAN-S-GMIT/images/main/08_UTID_Application_Footer_Section.png" width="500"/>
-</td>
-</tr>
-</table>
-
 ---
 
 These screenshots demonstrate the full **SOC investigation workflow**, starting from IOC entry to unified intelligence analysis across multiple OSINT platforms.
