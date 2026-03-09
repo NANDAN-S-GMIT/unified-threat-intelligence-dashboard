@@ -1,0 +1,162 @@
+.footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-primary);
+    margin-top: 2rem;
+    padding: 3rem 0 2rem;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.creatorSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.creatorName {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.creatorRole {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin: 0;
+}
+
+.creatorTitle {
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+    margin: 0;
+}
+
+.divider {
+    width: 100%;
+    max-width: 600px;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent,
+            var(--border-accent),
+            transparent);
+}
+
+.projectSection {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.disclaimer {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.disclaimer strong {
+    color: var(--accent-primary);
+    font-weight: 600;
+}
+
+.statement {
+    color: var(--text-tertiary);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.disclaimerSection {
+    max-width: 900px;
+    background: rgba(251, 191, 36, 0.05);
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+}
+
+.disclaimerTitle {
+    color: var(--status-suspicious);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem 0;
+    text-align: center;
+}
+
+.disclaimerText {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin: 0;
+    text-align: center;
+}
+
+.disclaimerText strong {
+    color: var(--accent-primary);
+    font-weight: 600;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    color: var(--text-tertiary);
+    font-size: 0.85rem;
+}
+
+.copyright p {
+    margin: 0;
+}
+
+.tech {
+    color: var(--text-tertiary);
+    opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        margin-top: 1.5rem;
+        padding: 2rem 0 1.5rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+        gap: 1.5rem;
+    }
+
+    .creatorName {
+        font-size: 1.25rem;
+    }
+
+    .creatorRole {
+        font-size: 1rem;
+    }
+
+    .disclaimer,
+    .statement {
+        font-size: 0.85rem;
+    }
+
+    .disclaimerSection {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .disclaimerText {
+        font-size: 0.85rem;
+    }
+}

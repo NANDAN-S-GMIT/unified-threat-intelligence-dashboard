@@ -1,0 +1,208 @@
+.panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: var(--spacing-md);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    min-height: 200px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--accent-tertiary));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.panel:hover::before {
+    opacity: 1;
+}
+
+.panel:hover {
+    border-color: rgba(0, 242, 234, 0.4);
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 242, 234, 0.2);
+}
+
+.panel:active {
+    transform: translateY(-2px);
+}
+
+.logoSection {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 242, 234, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 242, 234, 0.2);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+    transition: all 0.3s ease;
+}
+
+.panel:hover .logoSection {
+    background: rgba(0, 242, 234, 0.15);
+    border-color: rgba(0, 242, 234, 0.4);
+    transform: scale(1.05);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacing-xs);
+    flex: 1;
+}
+
+.name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.description {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.4em;
+    line-height: 1.4;
+}
+
+.iocInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: var(--spacing-xs);
+    padding: var(--spacing-xs);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.label {
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.iocValue {
+    font-size: 0.75rem;
+    color: var(--primary);
+    font-family: var(--font-mono);
+    word-break: break-all;
+    padding: 2px 4px;
+    background: rgba(0, 242, 234, 0.05);
+    border-radius: 4px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    width: 100%;
+    margin-top: auto;
+}
+
+.typebadges {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.typeBadge {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    background: rgba(112, 0, 255, 0.15);
+    border: 1px solid rgba(112, 0, 255, 0.3);
+    border-radius: 4px;
+    color: #b388ff;
+    font-weight: 600;
+}
+
+.analyzeButton {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary), var(--accent-tertiary));
+    color: #000;
+    border: none;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 242, 234, 0.3);
+}
+
+.analyzeButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 242, 234, 0.5);
+}
+
+.analyzeButton span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .panel {
+        min-height: 180px;
+        padding: var(--spacing-sm);
+    }
+
+    .logoSection {
+        width: 48px;
+        height: 48px;
+        font-size: 1.1rem;
+    }
+
+    .name {
+        font-size: 0.95rem;
+    }
+
+    .description {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .panel {
+        min-height: 160px;
+    }
+
+    .iocInfo {
+        padding: 6px;
+    }
+
+    .iocValue {
+        font-size: 0.7rem;
+    }
+}

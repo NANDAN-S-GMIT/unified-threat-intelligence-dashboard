@@ -1,0 +1,115 @@
+.container {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.icon {
+    font-size: 1.25rem;
+}
+
+.clearButton {
+    background: transparent;
+    border: 1px solid var(--border-primary);
+    color: var(--text-tertiary);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.clearButton:hover {
+    background: var(--status-malicious);
+    border-color: var(--status-malicious);
+    color: white;
+}
+
+.searchList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.searchItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-primary);
+    padding: 0.875rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.searchItem:hover {
+    background: var(--bg-hover);
+    border-color: var(--accent-primary);
+    transform: translateX(5px);
+}
+
+.typeIcon {
+    font-size: 1.25rem;
+}
+
+.iocText {
+    flex: 1;
+    color: var(--text-secondary);
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.typeBadge {
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .searchItem {
+        padding: 0.75rem;
+    }
+
+    .iocText {
+        font-size: 0.8rem;
+    }
+
+    .typeBadge {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.4rem;
+    }
+}

@@ -1,0 +1,316 @@
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(99, 102, 241, 0.1);
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(99, 102, 241, 0.2);
+}
+
+.toggleButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 1.75rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    animation: buttonPulse 3s ease-in-out infinite;
+}
+
+@keyframes buttonPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 2px rgba(99, 102, 241, 0.3);
+    }
+}
+
+.toggleButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.toggleButton:hover::before {
+    left: 100%;
+}
+
+.toggleButton:hover {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+    animation: none;
+    /* Stop pulse on hover */
+}
+
+.icon {
+    font-size: 1.75rem;
+    filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.5));
+}
+
+.buttonContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+
+.helperText {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.3px;
+}
+
+.arrow {
+    margin-left: auto;
+    color: var(--accent-primary);
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.toolList {
+    padding: 1.5rem 1.75rem 2rem;
+    border-top: 1px solid rgba(99, 102, 241, 0.2);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    background: rgba(15, 23, 42, 0.3);
+    overflow: hidden;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+
+    to {
+        opacity: 1;
+        max-height: 1000px;
+    }
+}
+
+.instruction {
+    grid-column: 1 / -1;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.toolItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(51, 65, 85, 0.6) 100%);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.toolItem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.8), rgba(139, 92, 246, 0.8));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.toolItem:hover::before {
+    transform: scaleX(1);
+}
+
+.toolItem:hover {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(51, 65, 85, 0.8) 100%);
+    border-color: rgba(99, 102, 241, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.2);
+}
+
+/* Compatible tool styling - highlighted */
+.compatible {
+    border-color: rgba(34, 197, 94, 0.4);
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(22, 101, 52, 0.3) 100%);
+}
+
+.compatible::before {
+    background: linear-gradient(90deg, rgba(34, 197, 94, 0.8), rgba(74, 222, 128, 0.8));
+}
+
+.compatible:hover {
+    border-color: rgba(34, 197, 94, 0.6);
+    box-shadow: 0 4px 20px rgba(34, 197, 94, 0.3);
+}
+
+/* Incompatible tool styling - dimmed */
+.incompatible {
+    opacity: 0.6;
+}
+
+.incompatible:hover {
+    opacity: 0.8;
+}
+
+.checkbox {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    accent-color: var(--accent-primary);
+    transition: transform 0.2s ease;
+}
+
+.checkbox:hover {
+    transform: scale(1.1);
+}
+
+.compatible .checkbox {
+    accent-color: rgb(34, 197, 94);
+}
+
+.platformIcon {
+    font-size: 1.75rem;
+    filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.4));
+    transition: filter 0.3s ease;
+}
+
+.toolItem:hover .platformIcon {
+    filter: drop-shadow(0 0 12px rgba(99, 102, 241, 0.6));
+}
+
+.compatible .platformIcon {
+    filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.5));
+}
+
+.compatible:hover .platformIcon {
+    filter: drop-shadow(0 0 12px rgba(34, 197, 94, 0.7));
+}
+
+.platformInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nameRow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.platformName {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+}
+
+.compatibleBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.65rem;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(74, 222, 128, 0.2));
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    border-radius: 12px;
+    color: rgb(74, 222, 128);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.supportedTypes {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .toggleButton {
+        padding: 1rem 1.25rem;
+        font-size: 1rem;
+    }
+
+    .toolList {
+        padding: 1.25rem;
+        grid-template-columns: 1fr;
+    }
+
+    .toolItem {
+        padding: 1rem;
+    }
+
+    .platformIcon {
+        font-size: 1.5rem;
+    }
+
+    .platformName {
+        font-size: 0.9rem;
+    }
+
+    .icon {
+        font-size: 1.5rem;
+    }
+
+    .supportedTypes {
+        font-size: 0.8rem;
+    }
+
+    .compatibleBadge {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+}

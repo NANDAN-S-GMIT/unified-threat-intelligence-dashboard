@@ -1,0 +1,353 @@
+.searchContainer {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.searchBox {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-primary);
+    border-radius: 16px;
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.searchBox:focus-within {
+    border-color: var(--accent-primary);
+    box-shadow: 0 8px 32px rgba(0, 217, 255, 0.2);
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.searchIcon {
+    font-size: 1.5rem;
+    filter: drop-shadow(0 0 8px rgba(0, 217, 255, 0.5));
+}
+
+.searchInput {
+    flex: 1;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-primary);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.1);
+}
+
+.searchInput::placeholder {
+    color: var(--text-tertiary);
+    font-family: 'Inter', sans-serif;
+}
+
+.copyButton {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-primary);
+    color: var(--text-secondary);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.copyButton:hover {
+    background: var(--bg-hover);
+    border-color: var(--accent-primary);
+    transform: scale(1.05);
+}
+
+.detectionBadge {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background: rgba(0, 217, 255, 0.1);
+    border: 1px solid var(--accent-primary);
+    border-radius: 10px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.badgeIcon {
+    font-size: 1.25rem;
+}
+
+.badgeText {
+    flex: 1;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.badgeText strong {
+    color: var(--accent-primary);
+    font-weight: 600;
+}
+
+.confidenceBadge {
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.analyzeButtonWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.analyzeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
+    color: white;
+    border: none;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 217, 255, 0.3);
+}
+
+.analyzeButton:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 217, 255, 0.4);
+}
+
+.analyzeButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(1);
+}
+
+.buttonIcon {
+    font-size: 1.3rem;
+}
+
+.shortcutHint {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    animation: fadeInPulse 1s ease-in-out;
+}
+
+@keyframes fadeInPulse {
+    0% {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.kbd {
+    display: inline-block;
+    padding: 0.15rem 0.4rem;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(220, 38, 38, 0.2));
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    border-radius: 4px;
+    color: rgb(248, 113, 113);
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Quick Test Examples */
+.quickTest {
+    margin-top: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.quickTestTitle {
+    color: var(--text-tertiary);
+    font-size: 0.75rem;
+    margin: 0 0 var(--spacing-xs) 0;
+    text-align: center;
+    font-weight: 500;
+}
+
+.testButtons {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 2px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 242, 234, 0.3) transparent;
+}
+
+.testButtons::-webkit-scrollbar {
+    height: 4px;
+}
+
+.testButtons::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.testButtons::-webkit-scrollbar-thumb {
+    background: rgba(0, 242, 234, 0.3);
+    border-radius: 2px;
+}
+
+.testBtn {
+    flex-shrink: 0;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 0.7rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgba(0, 0, 0, 0.6);
+    white-space: nowrap;
+}
+
+/* Safe Button - Green Text */
+.testBtn.safe {
+    color: var(--success);
+}
+
+.testBtn.safe:hover {
+    background: var(--success);
+    color: #000;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 255, 157, 0.5);
+}
+
+/* Malicious Button - Red Text */
+.testBtn.malicious {
+    color: var(--error);
+}
+
+.testBtn.malicious:hover {
+    background: var(--error);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(255, 42, 42, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .searchBox {
+        padding: var(--spacing-md);
+    }
+
+    .searchInput {
+        font-size: 0.9rem;
+        padding: 0.875rem 1rem;
+    }
+
+    .analyzeButton {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 1rem;
+    }
+
+    .shortcutHint {
+        font-size: 0.7rem;
+    }
+
+    .kbd {
+        font-size: 0.65rem;
+        padding: 0.1rem 0.3rem;
+    }
+
+    .detectionBadge {
+        flex-wrap: wrap;
+        gap: var(--spacing-xs);
+    }
+
+    .testRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .testLabel {
+        min-width: auto;
+    }
+
+    .testButtons {
+        width: 100%;
+    }
+
+    .testBtn {
+        min-width: 70px;
+        font-size: 0.65rem;
+        padding: 4px 8px;
+    }
+
+    .exampleButtons {
+        gap: var(--spacing-xs);
+    }
+
+    .exampleBtn {
+        font-size: 0.75rem;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .inputWrapper {
+        flex-wrap: wrap;
+    }
+
+    .searchIcon {
+        font-size: 1.25rem;
+    }
+
+    .copyButton {
+        font-size: 1rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .quickTestTitle {
+        font-size: 0.7rem;
+    }
+
+    .testButtons {
+        flex-direction: column;
+    }
+
+    .testBtn {
+        width: 100%;
+        font-size: 0.6rem;
+        padding: 4px 7px;
+    }
+}
