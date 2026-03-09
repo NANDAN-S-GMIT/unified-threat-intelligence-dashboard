@@ -66,6 +66,7 @@ The following screenshots highlight the key components and workflow of the **Uni
 <img src="https://raw.githubusercontent.com/NANDAN-S-GMIT/images/main/07_UTID_Unified_Intelligence_Results_Cards.png" width="500"/>
 </td>
 </tr>
+</table>
 
 ---
 
